@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://calgtd0le25dy"]
+[gd_scene load_steps=3 format=3 uid="uid://calgtd0le25dy"]
+
+[ext_resource type="Texture2D" uid="uid://dg5ucsji5f5ho" path="res://resources/cruiser.png" id="1_4v5og"]
+[ext_resource type="Shape3D" uid="uid://cdaq540nqw12y" path="res://resources/cruiser_shape.tres" id="2_2871t"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+offset = Vector2(2.08165e-12, 300)
+texture = ExtResource("1_4v5og")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14418, 3.17963, 0)
+shape = ExtResource("2_2871t")
