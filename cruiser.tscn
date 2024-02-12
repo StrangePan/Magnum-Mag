@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://cruiser.gd" id="1_lpp1y"]
 [ext_resource type="Shape3D" uid="uid://cdaq540nqw12y" path="res://resources/cruiser_shape.tres" id="2_2871t"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Cruiser" type="Node3D"]
 script = ExtResource("1_lpp1y")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

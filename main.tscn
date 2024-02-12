@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://4nhtmcwk8oot"]
+
+[ext_resource type="PackedScene" uid="uid://calgtd0le25dy" path="res://cruiser.tscn" id="1_badot"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, -4.96191e-16, 3.16108e-16, 3.16108e-16, 0.906308, 0.422618, -4.96191e-16, -0.422618, 0.906308, 2.08165e-12, 10, 10)
+fov = 55.0
+
+[node name="Cruiser" parent="." instance=ExtResource("1_badot")]
