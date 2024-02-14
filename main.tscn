@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://4nhtmcwk8oot"]
+[gd_scene load_steps=3 format=3 uid="uid://4nhtmcwk8oot"]
 
 [ext_resource type="PackedScene" uid="uid://calgtd0le25dy" path="res://cruiser.tscn" id="1_badot"]
+[ext_resource type="PackedScene" uid="uid://ctiuuh15yanr3" path="res://Lane.tscn" id="2_ve81j"]
 
 [node name="Main" type="Node3D"]
 
@@ -8,4 +9,14 @@
 transform = Transform3D(1, -4.96191e-16, 3.16108e-16, 3.16108e-16, 0.906308, 0.422618, -4.96191e-16, -0.422618, 0.906308, 2.08165e-12, 10, 10)
 fov = 55.0
 
-[node name="Cruiser" parent="." instance=ExtResource("1_badot")]
+[node name="Cruiser" parent="." node_paths=PackedStringArray("lanes") instance=ExtResource("1_badot")]
+lanes = [NodePath("../LeftLane"), NodePath("../MiddleLane"), NodePath("../RightLane")]
+
+[node name="MiddleLane" parent="." instance=ExtResource("2_ve81j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="RightLane" parent="." instance=ExtResource("2_ve81j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 2.08165e-12, 2.08165e-12)
+
+[node name="LeftLane" parent="." instance=ExtResource("2_ve81j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2.08165e-12, 2.08165e-12)
